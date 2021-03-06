@@ -68,10 +68,10 @@
         <div class="questao">
             <h1>Questã 02:<span> Senha Fixa <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1114"
                         target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: xxxxx</p>
-            <label for="">Digite a senha:</label>
-            <input type="password" id="">
-            <input type="button" value="Calcular">
+            <p id="senha">Resultado: xxxxx</p>
+            <label for="senha01">Digite a senha:</label>
+            <input type="password"  name="senha01" id="senha01">
+            <input type="button" value="Calcular" onclick="validar()">
         </div>
         <div class="questao">
             <h1>Questã 03:<span> Intervalo [0,25], [25,50], [50,75], [75,100] <a
@@ -110,6 +110,21 @@
     var resultado = (n1 + n2 + n3 ) /3;
 
     document.getElementById("media").innerHTML = "A média das 3 notas foi " +  resultado.toFixed(2) + ".";
+    }
+         function validar(){ 
+        
+        var password = Number(document.getElementById("senha01").value);
+
+;
+        if (password==2002 ){
+        
+            document.getElementById("senha").innerHTML = "Acesso permitido " }
+        
+         else 
+        {
+            document.getElementById("senha").innerHTML= "Senha errada! Try again"   
+        }
+
     }
 
 </script>
