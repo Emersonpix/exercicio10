@@ -56,14 +56,14 @@
             <h1>Questã 01:<span>Calcular a média ponderada de 3 notas
                     <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1006"
                         target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: A média das 3 notas foi xx.</p>
-            <label for="">Nota 01:</label>
-            <input type="text" id="">
-            <label for="">Nota 02:</label>
-            <input type="text" id="">
-            <label for="">Nota 03:</label>
-            <input type="text" id="">
-            <input type="button" value="Calcular">
+            <p id="media">Resultado: A média das 3 notas foi xx.</p>
+            <label for="nota01">Nota 01:</label>
+            <input type="text" name="nota01" id="nota01">
+            <label for="nota02">Nota 02:</label>
+            <input type="text" name="nota02" id="nota02">
+            <label for="nota03">Nota 03:</label>
+            <input type="text" name="nota03" id="nota03">
+            <input type="button" value="Calcular" onclick="calcular()">
         </div>
         <div class="questao">
             <h1>Questã 02:<span> Senha Fixa <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1114"
@@ -102,4 +102,15 @@
         </div>
     </div>
 </body>
+    <script>
+    function calcular(){
+    var n1 = Number(document.getElementById("nota01").value)  ;
+    var n2 = Number(document.getElementById("nota02").value);
+    var n3 = Number(document.getElementById("nota03").value);
+    var resultado = (n1 + n2 + n3 ) /3;
+
+    document.getElementById("media").innerHTML = "A média das 3 notas foi " +  resultado + ".";
+    }
+
+</script>
 </html>
